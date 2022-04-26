@@ -12,7 +12,7 @@ const Login = () => {
             const { data } = await axios.post("http://localhost:8000/api/login", dataUser)
             localStorage.setItem("user", JSON.stringify(data))
             alert("Đăng nhập thành công")
-            navigate("/chat")
+            navigate("/room")
         } catch (error) {
             alert(error.response.data.message)
         }
